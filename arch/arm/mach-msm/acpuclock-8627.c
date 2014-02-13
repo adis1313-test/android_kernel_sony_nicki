@@ -84,6 +84,9 @@ static struct msm_bus_paths bw_level_tbl[] __initdata = {
 	[2] = BW_MBPS(1600), /* At least 200 MHz on bus. */
 	[3] = BW_MBPS(2128), /* At least 266 MHz on bus. */
 	[4] = BW_MBPS(3200), /* At least 400 MHz on bus. */
+	[5] = BW_MBPS(3600), /* At least 450 MHz on bus. */
+	[6] = BW_MBPS(3936), /* At least 492 MHz on bus. */
+	[7] = BW_MBPS(4264), /* At least 533 MHz on bus. */
 };
 
 static struct msm_bus_scale_pdata bus_scale_data __initdata = {
@@ -96,17 +99,17 @@ static struct msm_bus_scale_pdata bus_scale_data __initdata = {
 /* TODO: Update vdd_dig, vdd_mem and bw when data is available. */
 static struct l2_level l2_freq_tbl[] __initdata = {
 	[0]  = { {  384000, PLL_8, 0, 0x00 },  LVL_NOM, 1050000, 1 },
-	[1]  = { {  432000, HFPLL, 2, 0x20 },  LVL_NOM, 1050000, 1 },
-	[2]  = { {  486000, HFPLL, 2, 0x24 },  LVL_NOM, 1050000, 1 },
+	[1]  = { {  432000, HFPLL, 2, 0x20 },  LVL_NOM, 1050000, 2 },
+	[2]  = { {  486000, HFPLL, 2, 0x24 },  LVL_NOM, 1050000, 2 },
 	[3]  = { {  540000, HFPLL, 2, 0x28 },  LVL_NOM, 1050000, 2 },
 	[4]  = { {  594000, HFPLL, 1, 0x16 },  LVL_NOM, 1050000, 2 },
-	[5]  = { {  648000, HFPLL, 1, 0x18 },  LVL_NOM, 1050000, 2 },
-	[6]  = { {  702000, HFPLL, 1, 0x1A },  LVL_NOM, 1050000, 3 },
-	[7]  = { {  756000, HFPLL, 1, 0x1C }, LVL_HIGH, 1150000, 3 },
-	[8]  = { {  810000, HFPLL, 1, 0x1E }, LVL_HIGH, 1150000, 3 },
+	[5]  = { {  648000, HFPLL, 1, 0x18 },  LVL_NOM, 1050000, 4 },
+	[6]  = { {  702000, HFPLL, 1, 0x1A },  LVL_NOM, 1050000, 4 },
+	[7]  = { {  756000, HFPLL, 1, 0x1C }, LVL_HIGH, 1150000, 4 },
+	[8]  = { {  810000, HFPLL, 1, 0x1E }, LVL_HIGH, 1150000, 4 },
 	[9]  = { {  864000, HFPLL, 1, 0x20 }, LVL_HIGH, 1150000, 4 },
-	[10] = { {  918000, HFPLL, 1, 0x22 }, LVL_HIGH, 1150000, 4 },
-	[11] = { {  972000, HFPLL, 1, 0x24 }, LVL_HIGH, 1150000, 4 },
+	[10] = { {  918000, HFPLL, 1, 0x22 }, LVL_HIGH, 1150000, 7 },
+	[11] = { {  972000, HFPLL, 1, 0x24 }, LVL_HIGH, 1150000, 7 },
 	{ }
 };
 
